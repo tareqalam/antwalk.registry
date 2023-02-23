@@ -45,6 +45,13 @@
   <plone:static
       directory="theme"
       type="theme"
+      name="antwalk-theme"
+      />
+
+
+  <plone:static
+      directory="theme"
+      type="theme"
       name="antwalktheme"
       />
 
