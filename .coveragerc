@@ -1,0 +1,6 @@
+[report]
+include =
+    src/antwalk/*
+omit =
+    */test*
+    */upgrades/*
