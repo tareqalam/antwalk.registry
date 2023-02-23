@@ -3,6 +3,14 @@
   <permissions>
   <!-- -*- extra stuff goes here -*- -->
 
+    <permission name="antwalk.registry: Add Student" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
+
     <permission name="antwalk.registry: Add Department" acquire="True">
       <role name="Manager"/>
       <role name="Site Administrator"/>

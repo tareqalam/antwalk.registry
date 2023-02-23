@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="antwalk.registry.AddStudent"
+        title="antwalk.registry: Add Student"
+    />
+
+
+    <permission
         id="antwalk.registry.AddDepartment"
         title="antwalk.registry: Add Department"
     />
