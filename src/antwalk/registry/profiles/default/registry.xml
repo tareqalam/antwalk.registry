@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<registry>
+<!-- -*- extra stuff goes here -*- -->
+   
+    <records prefix="plone.resources/antwalk-js"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="js">++plone++antwalk.registry/js/antwalk_common.js</value>
+        <value key="deps">jquery</value>
+    </records>
+
+
+    <records prefix="plone.resources/antwalk-common-css"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="css">++plone++antwalk.registry/css/antwalk_common.css</value>
+        <value key="deps">jquery</value>
+    </records>
+
+
+    <records prefix="plone.bundles/antwalk-common"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+      <value key="resources">
+        <element>antwalk-common-js</element>
+        <element>antwalk-common-css</element>
+      </value>
+      <value key="enabled">True</value>
+      <value key="jscompilation">++plone++antwalk.registry/js/antwalk_common.js</value>
+      <value key="csscompilation">++plone++antwalk.registry/css/antwalk_common.css</value>
+      <value key="last_compilation">2023-02-23 00:00:00</value>
+    </records>
+
+
+
+</registry>
