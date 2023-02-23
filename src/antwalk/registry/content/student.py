@@ -15,6 +15,7 @@ from zope.interface import implementer
 from antwalk.registry import _
 
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
+from zope.interface import invariant, Invalid
 
 vocab_gender = SimpleVocabulary([
     SimpleTerm(value='--NOVALUE--', title=_(u'Please Select')),
@@ -78,6 +79,14 @@ class IStudent(model.Schema):
     #     required=False
     # )
 
+    @invariant
+    def validateNumber(data):
+        if data.age:
+            if not str(data.age).isdigit():
+                raise Invalid(_(u'Age of student must be number'))
+            else:
+                if int(data.age) > 110:
+                    raise Invalid(_(u'Age of student can not be more than 110'))
 
 @implementer(IStudent)
 class Student(Item):
